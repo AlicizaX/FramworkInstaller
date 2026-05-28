@@ -134,7 +134,8 @@ namespace AlicizaX.Installer.Editor
             if (changed)
             {
                 _startupMessage = "OpenUPM scoped registry was updated. Waiting for Package Manager to resolve...";
-                _registryResolveRequest = Client.Resolve();
+                Client.Resolve();
+                _registryResolveRequest = Client.List();
                 EditorApplication.update -= MonitorRegistryResolve;
                 EditorApplication.update += MonitorRegistryResolve;
                 Repaint();
