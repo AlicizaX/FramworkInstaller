@@ -1,0 +1,14 @@
+{
+    "name": "AlicizaX.Installer.Runtime",
+    "rootNamespace": "AlicizaX.Installer",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
