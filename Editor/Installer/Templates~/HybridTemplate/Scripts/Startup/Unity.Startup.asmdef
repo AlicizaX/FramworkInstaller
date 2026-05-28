@@ -1,0 +1,24 @@
+{
+    "name": "Unity.Startup",
+    "rootNamespace": "",
+    "references": [
+        "UniTask.Runtime",
+        "HybridCLR.Runtime",
+        "YooAsset",
+        "UniTask.YooAsset",
+        "HybridCLRGenerate",
+        "Unity.TextMeshPro",
+        "ZString",
+        "AlicizaX.Framework.Runtime",
+        "AlicizaX.UI.Extension"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

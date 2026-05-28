@@ -1,0 +1,17 @@
+{
+    "name": "GameBase",
+    "rootNamespace": "",
+    "references": [
+        "GUID:564df1cc38305e340a693812656f6fe7",
+        "GUID:5c89d8180b6e1a145b027f32840f0a58"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

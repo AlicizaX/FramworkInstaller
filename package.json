@@ -2,15 +2,16 @@
   "name": "com.alicizax.unity.installer",
   "displayName": "Aliciza X Installer",
   "category": "Aliciza X",
-  "description": "Aliciza X framework installer package.",
+  "description": "Aliciza X framework installer. Installs the core package and imports project templates.",
   "version": "1.0.0",
   "unity": "2022.3",
   "keywords": [
     "Aliciza X",
-    "Installer"
+    "Installer",
+    "Framework"
   ],
   "repository": {
-    "name": "FramworkInstaller",
+    "name": "com.alicizax.unity.installer",
     "url": "https://github.com/AlicizaX/FramworkInstaller.git",
     "type": "git"
   },
