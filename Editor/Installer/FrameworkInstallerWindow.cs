@@ -180,6 +180,7 @@ namespace AlicizaX.Installer.Editor
                     {
                         EnsureRegistryBeforeDisplay();
                     }
+
                     return;
                 }
 
@@ -263,6 +264,7 @@ namespace AlicizaX.Installer.Editor
                         _selectedTemplate = TemplateType.Hybrid;
                         DrawTemplateChoice("Hybrid Template", true, "Upgrade current project to hot update template.");
                     }
+
                     return;
                 }
 
