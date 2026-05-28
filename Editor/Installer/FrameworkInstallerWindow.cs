@@ -852,14 +852,16 @@ namespace AlicizaX.Installer.Editor
                     InstallStateData data = JsonUtility.FromJson<InstallStateData>(File.ReadAllText(InstallStatePath));
                     if (TryParseState(data.installerState, out ProjectInstallState fileState))
                     {
-                        source = InstallStatePath;
-                        return fileState;
+                        ProjectInstallState validatedState = ValidatePersistedInstallState(fileState);
+                        source = validatedState == fileState ? InstallStatePath : InstallStatePath + " (missing template assets)";
+                        return validatedState;
                     }
 
                     if (!string.IsNullOrEmpty(data.template) && TryParseLegacyTemplate(data.template, out fileState))
                     {
-                        source = InstallStatePath + " (legacy)";
-                        return fileState;
+                        ProjectInstallState validatedState = ValidatePersistedInstallState(fileState);
+                        source = validatedState == fileState ? InstallStatePath + " (legacy)" : InstallStatePath + " (legacy, missing template assets)";
+                        return validatedState;
                     }
                 }
                 catch (Exception ex)
@@ -885,6 +887,26 @@ namespace AlicizaX.Installer.Editor
 
             source = "Default";
             return ProjectInstallState.NotInstalled;
+        }
+
+        private static ProjectInstallState ValidatePersistedInstallState(ProjectInstallState state)
+        {
+            if (state == ProjectInstallState.NormalTemplate && !HasRuntimeAssetMarkers())
+            {
+                return ProjectInstallState.NotInstalled;
+            }
+
+            if (state == ProjectInstallState.HybridTemplate)
+            {
+                if (HasHybridAssetMarkers())
+                {
+                    return ProjectInstallState.HybridTemplate;
+                }
+
+                return HasRuntimeAssetMarkers() ? ProjectInstallState.NormalTemplate : ProjectInstallState.NotInstalled;
+            }
+
+            return state;
         }
 
         private static bool TryParseState(string value, out ProjectInstallState state)
