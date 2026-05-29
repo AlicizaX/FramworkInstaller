@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 10
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -42,8 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,6 +66,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -160,9 +163,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 954605699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4da1a40cded634f92735f04940b8a4, type: 3}
+  m_Script: {fileID: 11500000, guid: fca67df1958ff444f887660921f53b26, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Startup::Unity.Startup.Procedure.ProcedureEntry
+  m_EditorClassIdentifier: 
 --- !u!1001 &1560299182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171,47 +174,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 425597497363353001, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5472542677182214335, guid: 8e4808bf30e54a8439a661bfa35ee982, type: 3}
+    - target: {fileID: 5472542677182214335, guid: 8e4808bf30e54a8439a661bfa35ee982,
+        type: 3}
       propertyPath: m_Name
       value: Entry
       objectReference: {fileID: 0}
