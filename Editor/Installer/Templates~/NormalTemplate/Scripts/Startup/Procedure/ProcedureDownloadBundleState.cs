@@ -23,7 +23,7 @@ namespace Unity.Startup.Procedure
 
         private void CreateDownloader()
         {
-            downloader = AppServices.App.Require<IResourceService>().CreateResourceDownloader();
+            downloader = AppServices.Require<IResourceService>().CreateResourceDownloader();
             if (downloader.TotalDownloadCount == 0)
             {
                 Log.Info("没有发现需要下载的资源");
