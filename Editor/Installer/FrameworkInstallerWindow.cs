@@ -246,8 +246,7 @@ namespace AlicizaX.Installer.Editor
 
                 if (_checkResult.ProjectState == ProjectInstallState.Custom)
                 {
-                    InstallerGui.HelpBox("Project is marked as custom/no template required. Template import is disabled by persisted state.", MessageType.Info);
-                    return;
+                    InstallerGui.HelpBox("Project is marked as custom/no template required. You can still import a template later.", MessageType.Info);
                 }
 
                 if (_checkResult.ProjectState == ProjectInstallState.HybridTemplate)
@@ -373,7 +372,8 @@ namespace AlicizaX.Installer.Editor
         {
             _checkResult = InstallCheckResult.Create();
 
-            if (_checkResult.ProjectState == ProjectInstallState.NotInstalled)
+            if (_checkResult.ProjectState == ProjectInstallState.NotInstalled ||
+                _checkResult.ProjectState == ProjectInstallState.Custom)
             {
                 _selectedTemplate = _checkResult.HasHybridClr ? TemplateType.Hybrid : TemplateType.Normal;
             }
@@ -414,12 +414,6 @@ namespace AlicizaX.Installer.Editor
             if (!_checkResult.HasUrp)
             {
                 blockReason = "URP package is required before installing AlicizaX framework templates.";
-                return false;
-            }
-
-            if (_checkResult.ProjectState == ProjectInstallState.Custom)
-            {
-                blockReason = "Project is marked as custom/no template required.";
                 return false;
             }
 
