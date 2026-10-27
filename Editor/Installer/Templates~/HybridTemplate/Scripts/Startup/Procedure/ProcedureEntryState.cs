@@ -1,7 +1,6 @@
 using System;
 using Cysharp.Threading.Tasks;
 using AlicizaX;
-using AlicizaX.Localization;
 using UnityEngine;
 using YooAsset;
 
