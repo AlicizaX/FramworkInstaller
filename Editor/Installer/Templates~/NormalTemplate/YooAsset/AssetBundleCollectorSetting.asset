@@ -81,7 +81,7 @@ MonoBehaviour:
         CollectorGUID: afddbfe87a53e9049bf031ee18842f87
         CollectorType: 0
         AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
+        PackRuleName: PackCollector
         FilterRuleName: CollectAll
         AssetTags: WEBGL_PRELOAD
         UserData: 
@@ -95,6 +95,19 @@ MonoBehaviour:
         UserData: 
       - CollectPath: Assets/Bundles/Configs/json
         CollectorGUID: c68e4b7f243cf484bac9c36ec1ee5a4f
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: DLL
+      GroupDesc: "\u4EE3\u7801"
+      AssetTags: DLL
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/Bundles/DLL
+        CollectorGUID: 3aad79ec1ea08c24c891bd3c669d4125
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
