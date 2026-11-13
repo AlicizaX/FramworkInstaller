@@ -820,8 +820,11 @@ namespace AlicizaX.Installer.Editor
         private static void ApplyHybridPlayerSettings()
         {
             BuildTargetGroup buildTargetGroup = EditorUserBuildSettings.selectedBuildTargetGroup;
-            PlayerSettings.SetScriptingBackend(buildTargetGroup, ScriptingImplementation.IL2CPP);
-            PlayerSettings.SetApiCompatibilityLevel(buildTargetGroup, ApiCompatibilityLevel.NET_4_6);
+            // NamedBuildTarget 重载自 2021.2 起提供，覆盖 2022.3 ~ Unity 7；旧 (BuildTargetGroup, …) 重载
+            // 在 Unity 6.x 已标记过时。
+            NamedBuildTarget namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(buildTargetGroup);
+            PlayerSettings.SetScriptingBackend(namedBuildTarget, ScriptingImplementation.IL2CPP);
+            PlayerSettings.SetApiCompatibilityLevel(namedBuildTarget, ApiCompatibilityLevel.NET_4_6);
             PlayerSettings.gcIncremental = false;
         }
 
