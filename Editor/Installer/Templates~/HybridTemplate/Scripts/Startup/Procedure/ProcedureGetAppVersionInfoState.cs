@@ -28,7 +28,7 @@ namespace Unity.Startup.Procedure
                 currentTryCount++;
                 if (StartupSetting.Version != Application.version)
                 {
-                    Log.Warning($"Version inconsistency : {Application.version}->{StartupSetting.Version} ");
+                    Log.Warning($"版本不一致：{Application.version}->{StartupSetting.Version}");
                     Utility.Platform.Quit();
 #if !UNITY_EDITOR
                     Utility.Platform.OpenURL(StartupSetting.AppDownloadUrl);

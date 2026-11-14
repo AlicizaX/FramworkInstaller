@@ -24,7 +24,7 @@ namespace Unity.Startup.Procedure
             //检查设备是否能够访问互联网
             if (Application.internetReachability == NetworkReachability.NotReachable)
             {
-                Log.Warning("The device is not connected to the network");
+                Log.Warning("设备未连接网络");
                 return;
             }
 
