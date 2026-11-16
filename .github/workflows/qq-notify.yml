@@ -1,0 +1,14 @@
+name: QQ 通知
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  notify:
+    uses: AlicizaX/public-github-actions-Public/.github/workflows/qq-notify.yml@main
+    secrets: inherit
